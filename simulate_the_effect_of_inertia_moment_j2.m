@@ -38,7 +38,7 @@ J2 = 0.0005;                         % set para #1
 A = [0 1 0 0; (b*g)/(a-J2) -c1/(a-J2) 0 c2/(a-J2); 0 0 0 1; -(b*g)/(a-J2) c1/(a-J2) 0 (a*c2)/(J2*(a-J2))];
 B = [0; 1/(a-J2); 0; a/(J2*(a-J2))];
 K = acker(A, B, p);                  % k constant for P controller
-sim ('pendulum_rwp_v2')              % call simulation #1
+sim ('pendulum_rwp_v2_2020b')              % call simulation #1
 xtime1 = simout_u4.time;             % get time vector
 u1a = simout_u1.signals.values(:);   % get angle
 u4a = simout_u4.signals.values(:);   % get wheel velocity
@@ -48,7 +48,7 @@ J2 = 0.002;                          % set para #2
 A = [0 1 0 0; (b*g)/(a-J2) -c1/(a-J2) 0 c2/(a-J2); 0 0 0 1; -(b*g)/(a-J2) c1/(a-J2) 0 (a*c2)/(J2*(a-J2))];
 B = [0; 1/(a-J2); 0; a/(J2*(a-J2))];
 K = acker(A, B, p);                  % k constant for P controller
-sim ('pendulum_rwp_v2')              % call simulation #2
+sim ('pendulum_rwp_v2_2020b')              % call simulation #2
 xtime2 = simout_u4.time;             % get time vector
 u1b = simout_u1.signals.values(:);   % get angle
 u4b = simout_u4.signals.values(:);   % get wheel velocity
@@ -58,7 +58,7 @@ J2 = 0.005;                          % set para #3
 A = [0 1 0 0; (b*g)/(a-J2) -c1/(a-J2) 0 c2/(a-J2); 0 0 0 1; -(b*g)/(a-J2) c1/(a-J2) 0 (a*c2)/(J2*(a-J2))];
 B = [0; 1/(a-J2); 0; a/(J2*(a-J2))];
 K = acker(A, B, p);                  % k constant for P controller
-sim ('pendulum_rwp_v2')              % call simulation #3
+sim ('pendulum_rwp_v2_2020b')              % call simulation #3
 xtime3 = simout_u4.time;             % get time vector
 u1c = simout_u1.signals.values(:);   % get angle
 u4c = simout_u4.signals.values(:);   % get wheel velocity
