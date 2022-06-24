@@ -28,7 +28,7 @@ b = m1*l1 + m2*l2;
 p = [-1 -1 -1 -1];                   % wanted pole
 
 % init variables
-theta_0 = 2;   % init angle
+theta_0 = 0.0349;   % init angle
 dcm_on = 0;     % start time dcm voltage
 Vm = 20;        % const parameter
 
